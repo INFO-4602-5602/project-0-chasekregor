@@ -62,6 +62,24 @@
         // Put your part two code here ***********************
         //Building Bars
 
+        d3.csv('anscombe_II.csv', function(csvData) {
+            var dataset = csvData;
+
+
+
+        // Leave this to test your data uploading. All data uploading should be above this line
+        function checkDataset(dataset) {
+            if (dataset.length == 11)
+                $("#partTwo").append("<p>data loaded correctly</p>");
+            else
+                $("#partTwo").append("<p>data loaded incorrectly. Try using the debugger to help you find the bug!</p>");
+            }
+
+
+        checkDataset(dataset);
+
+        });
+
 
 
 
