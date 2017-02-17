@@ -66,6 +66,7 @@
         var yVal = vals[1]; // Value to plot on y-axis
 
 
+
         d3.csv('anscombe_II.csv', function(csvData) {
             var dataset = csvData;
         // Testing data for part 2 loaded correctly
@@ -95,7 +96,7 @@
                             .range([h - yOffset - margin, margin]);
 
             // Next, we will create an SVG element to contain our visualization.
-            var svg = d3.select("#partThree").append("svg:svg")
+            var svg = d3.select("#partTwo").append("svg:svg")
                                             .attr("width", w)
                                             .attr("height", h);
 
@@ -145,19 +146,15 @@
                             .data(dataset);
 
                 // Create new elements if needed
-            point.enter().append("svg:circle");
+            point.enter().append("svg:rect");
 
                 // Update our selection
             point.attr("class", "point")
-                .attr("cx", function(d){return xScale(d[xVal]);})
-                .attr("cy", function(d) {return yScale(d[yVal]);})
-                .attr("r", 8)
-                .transition()
-                .duration(1000)
-                .attr("r", 0)
-                .transition()
-                .duration(1000)
-                .attr("r", 8)
+                .attr("x", function(d){return xScale(d[xVal])-20;})
+                .attr("y", function(d) {return yScale(d[yVal]);})
+                .attr("width", 40)
+                .attr("height", function(d) { return h - 100 - yScale(d[yVal]); });
+
                     // Give it a class
                     // x-coordinate
                     // y-coordinate
@@ -203,15 +200,6 @@
         };
 
         // Put your part three & four code here ***********************
-
-        var w = 700; // Width of our visualization
-        var h = 500; // Height of our visualization
-        var xOffset = 40; // Space for x-axis labels
-        var yOffset = 100; // Space for y-axis labels
-        var margin = 10; // Margin around visualization
-        var vals = ['x', 'y']; // List of data attributes
-        var xVal = vals[0]; // Value to plot on x-axis
-        var yVal = vals[1]; // Value to plot on y-axis
 
 
         d3.csv('anscombe_II.csv', function(csvData) {

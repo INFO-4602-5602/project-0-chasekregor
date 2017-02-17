@@ -8,10 +8,11 @@ body {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
+
 }
 
 .point {
-    fill: #f00;
+    fill: #0000ff;
     stroke: #000;
 }
 
@@ -20,4 +21,8 @@ body {
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.chart rect {
+  fill: steelblue;
 }
