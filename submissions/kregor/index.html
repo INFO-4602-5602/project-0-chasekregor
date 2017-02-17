@@ -37,8 +37,9 @@
         // Put your part one code here ***********************
         //Interpreting aka Loading Data *****
 
-        d3.csv('anscombe_1.csv', function(csvData) {
+        d3.csv('anscombe_I.csv', function(csvData) {
             var dataset = csvData;
+
 
 
         // Leave this to test your data uploading. All data uploading should be above this line
@@ -47,8 +48,15 @@
                 $("#partOne").append("<p>data loaded correctly</p>");
             else
                 $("#partOne").append("<p>data loaded incorrectly. Try using the debugger to help you find the bug!</p>");
-        }
-    });
+            }
+
+
+        checkDataset(dataset);
+
+        });
+
+
+
 
 
         // Put your part two code here ***********************
