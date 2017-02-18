@@ -1,4 +1,6 @@
+For this project I worked with Kyle Frye and Taylor Lawrence 
 
+The only problem we ran into was with problem 5. We tried changing the size of the graphs and the x offsets and even tried making the graphs above bigger but no matter what we tried the graphs always displayed below the first graph in problem five all messed up. The original thought was to make 4 graph just with different x offsets. You can see this displayed in my final index.html file. 
 
 
 
