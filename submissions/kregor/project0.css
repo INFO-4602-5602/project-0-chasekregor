@@ -26,3 +26,8 @@ body {
 .chart rect {
   fill: steelblue;
 }
+
+.partFive {
+    float:left;
+    
+}
